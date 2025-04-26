@@ -24,7 +24,7 @@
     "OWNER_NUMBER": {
       "description": "Bot owner's number with country code and name (format: '1234567890,NAME')",
       "required": true,
-      "value": "639129985130,DEVELOPER"
+      "value": "923368627999,SIGMAx"
     },
     "owner_react_emojie": {
       "description": "Custom emoji for owner reactions (optional)",
@@ -52,7 +52,7 @@
       "value": "all"
     },
     "DATABASE_URL": {
-      "description": "MongoDB/Postgres/PrinceDB connection URL for enhanced performance",
+      "description": "MongoDB/Postgres connection URL for enhanced performance",
       "required": false,
       "value": ""
     },
@@ -124,7 +124,7 @@
     "DL_MSG": {
       "description": "Success message for downloaded media",
       "required": true,
-      "value": "_*📥DOWNLOADED SUCCESSFULLY✅*_"
+      "value": "*DOWNLOADED SUCCESSFULLY*"
     } 
   },
   "buildpacks": [
