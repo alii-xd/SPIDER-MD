@@ -1,0 +1,141 @@
+{
+  "name": "SIGMA-MD",
+  "description": "Advanced WhatsApp Multi-Device User Bot",
+  "repository": "https://github.com/SigmaByteXD/SIGMA-MD",
+  "logo": "https://raw.githubusercontent.com/SigmaByteXD/SigmaByteXD/refs/heads/main/ByteXSigma.jpg",
+  "success_url": "https://github.com/SigmaByteXD/SIGMA-MD",
+  "keywords": [
+    "nodejs", "heroku", "whatsapp-bot", "multi-device", 
+    "automation", "javascript", "sigmamd", "whatsapp-api"
+  ],
+  "image": "heroku/nodejs",
+  "stack": "container",
+  "env": {
+    "SESSION_ID": {
+      "description": "Your WhatsApp session ID (required for authentication)",
+      "required": true,
+      "value": ""
+    },
+    "BOT_NAME": {
+      "description": "Display name for your bot",
+      "required": true,
+      "value": "SIGMA-MD"
+    },
+    "OWNER_NUMBER": {
+      "description": "Bot owner's number with country code and name (format: '1234567890,NAME')",
+      "required": true,
+      "value": "639129985130,DEVELOPER"
+    },
+    "owner_react_emojie": {
+      "description": "Custom emoji for owner reactions (optional)",
+      "required": false,
+      "value": "🤍"
+    },
+    "MODE": {
+      "description": "Bot accessibility mode - 'public' or 'private'",
+      "required": true,
+      "value": "public"
+    },
+    "PREFIX": {
+      "description": "Command prefix symbol (leave empty for multiple prefixes)",
+      "required": false,
+      "value": ""
+    },
+    "AlwaysOnline": {
+      "description": "Maintain constant online presence (true/false)",
+      "required": false,
+      "value": "false" 
+    },
+    "antidelete": {
+      "description": "Forward deleted messages: 'private' (PMs only), 'all' (PMs+groups), or 'false' (disabled)",
+      "required": false,
+      "value": "all"
+    },
+    "DATABASE_URL": {
+      "description": "MongoDB/Postgres/PrinceDB connection URL for enhanced performance",
+      "required": false,
+      "value": ""
+    },
+    "ANTI_LINK": {
+      "description": "Automatically delete links and ban senders (true/false)",
+      "required": false,
+      "value": "true"
+    },
+    "AutoReaction": {
+      "description": "Enable automatic message reactions (true/false)",
+      "required": false,
+      "value": "false"
+    },
+    "autoreactions_emojies": {
+      "description": "Custom emojis for auto-reactions (comma-separated, leave empty for defaults)",
+      "required": false,
+      "value": "♥️,🤗,❤️,💞,❣️,💙,💛,🤍,💚,😍,🥰,💝,💖,💗,💓,💞,💕,❣️,💘,💟,🖤,🤎,💜,💫,🌸"
+    },
+    "VAR_APP": {
+      "description": "Your Heroku app name (must match app name above)",
+      "required": true,
+      "value": ""
+    },
+    "VAR_KEY": {
+      "description": "Heroku API key (found in Account Settings)",
+      "required": true,
+      "value": ""
+    },
+    "STATUSVIEW": {
+      "description": "Automatically view WhatsApp status updates (true/false)",
+      "required": false,
+      "value": "true"
+    },
+    "StatusLikes": {
+      "description": "Automatically like viewed statuses (true/false)",
+      "required": false,
+      "value": "false"
+    },
+    "StatusEmojies": {
+      "description": "Custom emojis for status likes (comma-separated)",
+      "required": false,
+      "value": "♥️,🤗,❤️,💞,❣️,💙,💛,🤍,💚,😍,🥰,💝,💖,💗,💓,💞,💕,❣️,💘,💟,🖤,🤎,💜,💫,🌸"
+    },
+    "STATUS_MSG": {
+      "description": "Notification message when viewing statuses",
+      "required": false,
+      "value": "Your Status has been seen by Prince bot"
+    },
+    "REJECTSCALLS": {
+      "description": "Call handling: 'truemsg' (reject with message), 'true' (silent reject), or 'false' (allow calls)",
+      "required": false,
+      "value": "false"
+    },
+    "CALLMSG": {
+      "description": "Custom message for rejected calls",
+      "required": false,
+      "value": "For now calls are restricted by my owner"
+    },
+    "ANTIFAKE_USERS": {
+      "description": "Block numbers from groups (comma-separated country codes, e.g., '1,212,63,44')",
+      "required": false,
+      "value": "1,212,63,44"
+    },
+    "PACK_NAME": {
+      "description": "Default sticker pack name",
+      "required": false,
+      "value": "SIGMA🗿"
+    },
+    "DL_MSG": {
+      "description": "Success message for downloaded media",
+      "required": true,
+      "value": "_*📥DOWNLOADED SUCCESSFULLY✅*_"
+    } 
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/bogini/heroku-buildpack-graphicsmagick"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-activestorage-preview"
+    }
+  ]
+}
