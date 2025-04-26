@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIGMA-MD Status</title>
+  <style>
+    /* Body Styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #a8eafc, #d0f0ff, #f0faff, #a0cce3);
+      background-size: 400% 400%;
+      animation: coldAnimation 10s ease infinite alternate;
+      overflow: hidden;
+    }
+
+    @keyframes coldAnimation {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    /* Central Box */
+    .container {
+      text-align: center;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(173, 216, 230, 0.7);
+      backdrop-filter: blur(10px);
+      width: 80%;
+      max-width: 600px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: scale(0.8); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    /* Title Styling */
+    .title {
+      font-size: 48px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #ffffff;
+      text-shadow: 0 0 15px #e0f7ff,
+                   0 0 30px #b0e0ff,
+                   0 0 45px #80d0ff;
+      animation: icyGlow 3s infinite alternate;
+    }
+
+    @keyframes icyGlow {
+      0% { text-shadow: 0 0 10px #cceeff; }
+      100% { text-shadow: 0 0 20px #66ccff, 0 0 40px #99e0ff; }
+    }
+
+    /* Running Text */
+    .marquee {
+      margin-top: 20px;
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+    }
+
+    .marquee span {
+      display: inline-block;
+      font-size: 22px;
+      color: #e6f9ff;
+      text-shadow: 0 0 10px #cceeff;
+      animation: marqueeAnimation 12s linear infinite;
+    }
+
+    @keyframes marqueeAnimation {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* Button Styling */
+    .action-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 25px;
+      font-size: 18px;
+      color: #ffffff;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 2px solid #ffffff;
+      border-radius: 5px;
+      background: transparent;
+      transition: 0.3s;
+    }
+
+    .action-btn:hover {
+      background: #ffffff;
+      color: #3399ff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Status Title -->
+    <div class="title">Sigma-ByteX Online</div>
+
+    <!-- Running Text -->
+    <div class="marquee">
+      <span>
+        SIGMA-MD is live! | Reliable, Fast, and Efficient | Always here to help! | Stay ahead with SIGMA-MD!
+      </span>
+    </div>
+
+    <!-- Action Button -->
+    <a href="#" class="action-btn">Get Started</a>
+  </div>
+</body>
+  </html>
